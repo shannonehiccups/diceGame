@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Dice Game Code Along">
+    <title>Dice Game</title>
+</head>
+<body>
+    <main>
+        <!-- Player 1 side -->
+        <section class="player player--0 player--active">
+            <h2 class="name" id="name--0">Player 1</h2>
+            <p class="score" id="score--0">42</p>
+            <div class="current">
+                <p class="current-label">Current</p>
+                <p class="current-score" id="current--0">0</p>
+            </div>
+        </section>
+        <!-- Player 2 side -->
+        <section class="player player--1">
+            <h2 class="name" id="name--1">Player 2</h2>
+            <p class="score" id="score--1">42</p>
+            <div class="current">
+                <p class="current-label">Current</p>
+                <p class="current-score" id="current--1"></p>
+            </div>
+        </section>
+        
+        <!-- needed for game play -->
+        <img src="dice-1.png" alt="die" class="dice"/>
+        <button class="btn btn--new">New Game</button>
+        <button class="btn btn--instructions show-modal" id="instbtn">Instructions</button>
+        <button class="btn btn--roll">Roll</button>
+        <button class="btn btn--hold">Hold</button>
+
+        <!-- modal window to pop up instructions -->
+        <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>Instructions</h1>
+            <p>
+              Play begins with player 1. They roll the dice until they either click hold or roll a one. If they roll a one, play switches to player 2 and all points accumulated from that turn are forfeited. First player to 100 points is the winner. 
+            </p>
+          </div>
+          <div class="overlay hidden"></div>
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
